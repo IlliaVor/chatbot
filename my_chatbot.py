@@ -15,7 +15,7 @@ chatbot = ChatBot(
             'import_path': 'chatterbot.logic.BestMatch',
             'statement_comparison_function': 'chatterbot.comparisons.levenshtein_distance',
             'response_selection_method': get_random_response,
-            'threshold': 0.65,
+            'threshold': 0.70,
         },
         {
             'import_path': 'chatterbot.logic.MathematicalEvaluation',
@@ -42,10 +42,32 @@ training_data = [
     "I'm sorry, I cannot provide weather information at the moment.",
     "What time is it?",
     "It's time for you to ask me another question!",
-    "Do you like pizza?",
-    "Yes, I enjoy a good pizza!",
+    "Who created you?",
+    "I was created by an awesome developer!",
     "Can you help me with something?",
     "Of course! What do you need help with?",
+    "What languages do you speak?",
+    "I can communicate in English.",
+    "Where do you live?",
+    "I exist in the digital world, so I don't have a physical location.",
+    "Tell me something interesting.",
+    "Did you know that the world's oldest known recipe is for beer?",
+    "What's your favorite color?",
+    "I don't have preferences like humans do, but I like the color blue!",
+    "Do you know any programming languages?",
+    "I am written in Python, but I can understand and respond to conversations in natural language.",
+    "Can you sing?",
+    "I'm afraid I can't sing, but I can help you find song lyrics!",
+    "What's the square root of 144?",
+    "The square root of 144 is 12.",
+    "Tell me a fun fact.",
+    "Polar bears are left-handed.",
+    "What's the capital of Japan?",
+    "The capital of Japan is Tokyo.",
+    "Can you tell me a bedtime story?",
+    "Once upon a time, in a faraway land, there lived a wise old owl...",
+    "What's your favorite animal?",
+    "I don't have preferences like humans do, but I find all animals fascinating!"
     "Goodbye",
     "Goodbye! Have a great day!"
 ]
@@ -58,7 +80,7 @@ def train_bot():
     corpus_trainer.train('chatterbot.corpus.english')
 
 def run_chatbot():
-    print("Welcome to GOGich ChatBot. Type 'exit' to end the conversation.")
+    print("Welcome to GOGich ChatBot!. 'exit' - to leave")
     while True:
         try:
             user_input = input("You: ")
